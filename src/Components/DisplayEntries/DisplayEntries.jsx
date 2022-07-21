@@ -1,3 +1,6 @@
+import DislikedHearts from "../DislikedHearts/DislikedHearts";
+import LikedHearts from "../LikedHearts/LikedHearts";
+
 const DisplayEntries = (props) => {
     return ( 
         <table className="table">
@@ -15,6 +18,8 @@ const DisplayEntries = (props) => {
                 <td>{entry.name}</td>
                 <td>{entry.post}</td>
                 <td>{entry.date}</td>
+                <td><LikedHearts /></td>
+                <td><DislikedHearts /></td>
               </tr>
             );
           })}
