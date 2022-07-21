@@ -9,7 +9,7 @@ const DisplayEntries = (props) => {
           </tr>
         </thead>
         <tbody>
-          {entries.map((entry) => {
+          {props.parentEntries.map((entry) => {
             return (
               <tr>
                 <td>{entry.name}</td>
