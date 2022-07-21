@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 import Posts from './Components/Posts/Posts';
 import NavBar from './Components/NavBar/NavBar';
+import './App.css';
 
 function App() {
 
@@ -16,11 +17,15 @@ function App() {
     <div className='container-fluid'>
       <NavBar />
       <div className='row'>
-        <div className='col-md-6'>
-          <Posts addNewEntryProperty={addNewEntry} />
+        <div className='col-md-12'>
+          <div className='border-box'>
+            <Posts addNewEntryProperty={addNewEntry} />
+          </div>
         </div>
-        <div className='col-md-6'>
-          <DisplayEntries parentEntries={entries} />
+        <div className='col-md-12'>
+          <div className='border-box'>
+            <DisplayEntries parentEntries={entries} />
+          </div>
         </div>
       </div>
     </div>

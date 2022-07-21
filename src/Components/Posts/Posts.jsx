@@ -19,13 +19,19 @@ const Posts = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
-            <label>Post</label>
-            <input type='text' value={post} onChange={(event) => setPost(event.target.value)} />
-            <label>Date</label>
-            <input type='date' value={date} onChange={(event) => setDate(event.target.value)} />
-            <button type='submit'>Create</button>
+            <div className='form-group'>
+                <label>Name</label>
+                <input type='text' className='form-control' value={name} onChange={(event) => setName(event.target.value)} />
+            </div>
+            <div className='form-group'>
+                <label>Post</label>
+                <textarea className='form-control' rows='4' value={post} onChange={(event) => setPost(event.target.value)}></textarea>
+            </div>
+            <div className='form-group'>
+                <label>Date</label>
+                <input type='date' className='form-control' value={date} onChange={(event) => setDate(event.target.value)} />
+            </div>
+            <button type='submit' className='btn btn-primary' style={{'margin-top': '1em'}}>Create</button>
         </form>
      );
 }
