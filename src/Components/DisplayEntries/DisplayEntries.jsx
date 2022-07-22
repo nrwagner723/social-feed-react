@@ -1,5 +1,4 @@
-import DislikedHearts from "../DislikedHearts/DislikedHearts";
-import LikedHearts from "../LikedHearts/LikedHearts";
+import HeartPresenter from "../HeartPresenter";
 
 const DisplayEntries = (props) => {
     return ( 
@@ -18,8 +17,7 @@ const DisplayEntries = (props) => {
                 <td>{entry.name}</td>
                 <td>{entry.post}</td>
                 <td>{entry.date}</td>
-                <td><LikedHearts /></td>
-                <td><DislikedHearts /></td>
+                <HeartPresenter />
               </tr>
             );
           })}

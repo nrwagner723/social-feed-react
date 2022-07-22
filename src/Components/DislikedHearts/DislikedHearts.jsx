@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-const DislikedHearts = (props) => {
-  const [isDisliked, setIsDisliked] = useState(false);
+const DislikedHearts = ({setIsDisliked, isDisliked, setIsLiked}) => {
 
   return (
-    <p onClick={() => setIsDisliked(!isDisliked)}>
+    <p onClick={() => {setIsDisliked(!isDisliked); setIsLiked(false)}}>
       {isDisliked ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
